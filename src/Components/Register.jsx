@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const Register = () => {
   const [pin, setPin] = useState('');
@@ -53,11 +54,14 @@ const Register = () => {
   };
 
   return (
-    <div className="hero bg-base-200 min-h-screen flex items-center justify-center">
+    
+   <div>
+    <Navbar></Navbar>
+     <div className="hero bg-base-200 min-h-screen flex items-center justify-center">
       <div className="text-center lg:text-left flex flex-col items-center">
         <img className="rounded-full h-16 w-16 mb-4 mt-6" src="https://i.ibb.co/zbxKtmC/image-260nw-180370182.jpg" alt="" />
-        <h2 className="text-green-600 font-bold text-xl font-serif">Smart Banking</h2>
-        <h1 className="text-3xl font-bold">Register Now</h1>
+       
+        <h1 className="text-3xl font-bold text-green-700">Register Now</h1>
         <div className="card bg-base-100 w-full max-w-sm mt-8 shadow-2xl">
           <form onSubmit={handleRegistration} className="card-body">
             <div className="form-control">
@@ -104,7 +108,7 @@ const Register = () => {
               {pinError && <span className="text-red-600">{pinError}</span>}
               <label className="label">
                 <span className="label-text-alt link link-hover text-lg">
-                  Already Registered? Please <Link to="/login" className="text-blue-800 font-bold">Log in</Link>
+                  Already Registered? Please <Link to="/login" className="text-green-950 font-bold">Log in</Link>
                 </span>
               </label>
               {registrationError && <span className="text-red-600">{registrationError}</span>}
@@ -116,6 +120,7 @@ const Register = () => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 

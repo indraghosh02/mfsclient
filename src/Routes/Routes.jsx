@@ -3,6 +3,8 @@ import Main from "../Layout/Main";
 import Register from "../Components/Register";
 import Login from "../Components/Login";
 
+import Dashboard from "../Components/Dashboard";
+
 const router = createBrowserRouter([
     {
       path: "/",
@@ -12,6 +14,10 @@ const router = createBrowserRouter([
       path: "/login",
       element: <Login></Login>,
     },
+    {
+      path:'dashboard',
+      element:  <Dashboard></Dashboard>,
+    }
   ]);
 
   export default router;
