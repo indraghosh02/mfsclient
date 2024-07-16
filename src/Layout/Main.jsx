@@ -1,10 +1,11 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Navbar2 from '../Components/Navbar2';
 
 const Main = () => {
     return (
         <div>
-            <h3>hohgoiahh</h3>
+            <Navbar2></Navbar2>
             <Outlet></Outlet>
         </div>
     );

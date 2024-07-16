@@ -16,8 +16,6 @@ const Dashboard = () => {
   return (
     <div>
       <Navbar2 />
-  
-     
       {userRole === 'User' && <UserDashboard />}
       {userRole === 'agent' && <AgentDashboard />}
       {userRole === 'admin' && <AdminDashboard />}
